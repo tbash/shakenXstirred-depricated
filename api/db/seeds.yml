@@ -1,0 +1,284 @@
+---
+
+cocktails:
+
+  - name: Two-One-Two
+    recipe: |
+            The founders of New York’s Contemporary Cocktails found the perfect balance using Manhattan’s historic telephone prefix as the proportions for this drink.
+            2 oz. Partida Reposado Tequila
+            2 oz. Ruby Red Grapefruit Juice
+            1 oz. Aperol
+            Shake with ice and strain into a chilled Collins glass
+            filled with ice
+            Garnish with an orange twist
+            —Aisha Sharpe and Willy Shine, New York, 2008
+
+
+  - name: 20TH CENTURY
+    recipe: |
+            This cocktail was credited to C. A. Tuck and named after the 20th Century Limited luxury train that traveled between New York City and Chicago from 1902 to 1967.
+            1.5 oz. Plymouth Gin
+            .75 oz. Marie Brizard White Crème de Cacao
+            .75 oz. Lillet Blanc
+            .75 oz. Lemon Juice
+            Shake with ice and strain into a chilled coupe
+            No garnish
+            —W. J. Tarling, Café Royale Cocktail Book, 1937
+
+  - name: 21ST CENTURY
+    recipe: |
+            I created this tequila-based 20th Century Cocktail at the Pegu Club with the guidance of Audrey Saunders.
+            2 oz. Siete Leguas Blanco Tequila
+            .75 oz. Marie Brizard White Crème de Cacao
+            .75 oz. Lemon Juice
+            Shake with ice and strain into a chilled, Pernodrinsed coupe
+            No garnish
+            —Jim Meehan, New York, 2007
+
+  - name: ABSINTHE DRIP
+    recipe: |
+            This is the classic preparation for absinthe, which traditionally ranges from 60% to 68% alcohol by volume. The water helps release the aromatic elements of the spirit and dilutes it to a potable strength.
+            1.5 oz. Vieux Pontarlier Absinthe
+            4.5-6 oz. Ice-Cold Filtered Water
+            1 Sugar Cube
+            Pour absinthe into a chilled absinthe glass. Place an absinthe spoon over the rim of the glass and set a sugar cube on top of the spoon. Using an absinthe fountain or water carafe, slowly pour or drip icecold water over the sugar cube into the glass. As the dripping water dissolves the sugar cube, watch the “hydrophobic” layer of undiluted absinthe rise to the top of the glass. When the mixture is completely cloudy, the drip should be ready. Stir and serve.
+            —Jerry Thomas, Bar-Tenders Guide, 1862
+
+  - name: AGAINST ALL ODDS COCKTAIL
+    recipe: |
+            One quiet Sunday evening in August, we collaborated on this unusual cocktail prepared with wine and spirits based on cane, agave, and grain. It earned its name by defying all drinkmixing logic.
+            1.5 oz. Bushmills Irish Whiskey
+            1.5 oz. Channing Daughters Scuttlehole Chardonnay
+            .5 oz. Rothman & Winter Orchard Apricot
+            .25 oz. Rhum Clément Creole Shrubb
+            Stir with ice and strain into a chilled,
+            Ilegal Reposado Mezcal-rinsed coupe
+            Garnish with a pansy flower
+            —Jim/David/Gerry, Summer 2008
+
+  - name: ÁGUIL A AZTECA
+    recipe: |
+            A Tequila-based Aviation cocktail variation named after the iconic symbol of the strongest Aztec warrior, the eagle.
+            1.5 oz. Jose Cuervo Tradicional Tequila
+            1 oz. Honeydew Melon Juice
+            .25 oz. Canton Ginger Liqueur
+            .25 oz. Rothman & Winter Crème de Violette
+            Shake with ice and strain into a chilled coupe
+            No garnish
+            —Jim Meehan, Summer 2008
+
+  - name: AIRMAIL
+    recipe: |
+            Underneath the printed recipe in Here’s How, it states: “It ought to make you fly high.”
+            1 oz. Banks 5 Island Rum
+            .5 oz. Lime Juice
+            .5 oz. Honey Syrup
+            Shake with ice and strain into a chilled coupe
+            Top with 1 oz. Moët Imperial Champagne
+            Garnish with a lime wheel
+            —W. C. Whitfield, Here’s How, 1941
+
+  - name: ALBERT MATHIEU
+    recipe: |
+            In 1802, Albert Mathieu, a French mining engineer, proposed a tunnel under the English Channel that eventually led to the Chunnel that now connects England and France.
+            1.5 oz. Plymouth Gin
+            .75 oz. Lillet Blanc
+            .75 oz. Green Chartreuse
+            1 barspoon St. Germain Elderflower Liqueur
+            1 dash Regan’s Orange Bitters
+            Stir with ice and strain into a chilled coupe
+            Garnish with an orange twist
+            —Kevin Martin, Boston, 2009
+
+  - name: AMERICANO HIGHBALL
+    recipe: |
+            Originally called the Milano-Torino, this drink was so popular among American tourists, the Italian barmen renamed it in their honor.
+            1.5 oz. Carpano Antica Sweet Vermouth
+            1.5 oz. Campari
+            Build in a chilled Collins glass
+            Add ice and top with 2.5 oz. Club Soda
+            Garnish with half an orange wheel
+            —Leurs Cocktails Par Antoine, 1932
+
+  - name: ALGONQUIN
+    recipe: |
+            This drink was named after the historic Manhattan hotel where a number of famous writers, artists, and actors (members of the Algonquin Round Table) gathered for lunch before Prohibition went into effect.
+            2 oz. Rittenhouse Bonded Rye Whiskey
+            .75 oz. Dolin Dry Vermouth
+            .75 oz. Pineapple Juice
+            Stir with ice and strain into a chilled coupe
+            No garnish
+            —Selmer Fougner, Along the Wine Trail, 1935
+
+  - name: APEROL SPRITZ
+    recipe: |
+            This simple recipe, listed on the back of the Aperol bottle, is one of the most refreshing summer coolers.
+            2 oz. Aperol
+            1 oz. Carpenè Malvolti Prosecco
+            1 oz. Club Soda
+            .5 oz. Orange Juice
+            Add everything to a chilled rocks glass, then fill with ice
+            Stir and garnish with half an orange wheel
+            —Classic, Spring 2007
+
+  - name: APRICOT FLIP
+    recipe: |
+            This rich fall flip was created right after Orchard Apricot was released in the U.S. The stone fruit liqueur marries perfectly with Cognac.
+            2 oz. Hine V.S.O.P. Cognac
+            .75 oz. Rothman & Winter Orchard Apricot
+            .5 oz. Simple Syrup
+            1 Whole Organic Egg
+            Dry-shake, then shake with ice and strain into a chilled fizz glass
+            Garnish with grated nutmeg
+            —John Deragon, Fall 2007
+
+  - name: ARCHANGEL
+    recipe: |
+            Michael and Richie named this cocktail after the Archangel Gabriel following a spirited conversation about Argentinean soccer legend Gabriel Batistuta.
+            2.25 oz. Plymouth Gin
+            .75 oz. Aperol
+            2 Slices Cucumber
+            Muddle the cucumber and Aperol in a mixing glass
+            Add gin and ice, then stir and fine-strain into a chilled coupe
+            Garnish with a lemon twist
+            —Michael McIlroy & Richard Boccato, New York, 2006
+
+  - name: ASTORIA BIANCO
+    recipe: |
+            I created this Astoria cocktail variation at Gramercy Tavern after acquiring a copy of Albert Stevens Crockett’s Old Waldorf Bar Days.
+            2.5 oz. Tanqueray Gin
+            1 oz. Martini Bianco Vermouth
+            2 dashes House Orange Bitters
+            Stir with ice and strain into a chilled coupe
+            Garnish with an orange twist
+            —Jim Meehan, New York, 2005
+
+  - name: AVIATION
+    recipe: |
+            It’s thought that this azure-colored drink, created during the dawn of commercial aviation, may have been named after the ships that flew above the clouds.
+            2 oz. Beefeater Gin
+            .75 oz. Lemon Juice
+            .5 oz. Luxardo Maraschino Liqueur
+            .25 oz. Rothman & Winter Crème de Violette
+            Shake with ice and strain into chilled coupe
+            No garnish
+            —Hugo Ensslin, Recipes for Mixed Drinks, 1916
+
+  - name: BEACHBUM
+    recipe: |
+            John Deragon created this cocktail in honor of Jeff “Beachbum” Berry, whose books have resurrected tiki culture in the 21st century.
+            1 oz. Mount Gay Eclipse Amber Rum
+            1 oz. Flor de Caña Silver Dry Rum
+            1 oz. Pineapple Juice
+            .75 oz. Lime Juice
+            .5 oz. Rothman & Winter Orchard Apricot
+            .5 oz. Kassatly Chtaura Orgeat
+            Shake with ice and strain into a chilled tiki mug filled with ice cubes
+            Garnish with an orange-cherry flag and an umbrella
+            —John Deragon, Winter 2007
+
+  - name: BEER AND A SMOKE
+    recipe: |
+            I spiked this spiritous Michelada with smoky mezcal and seasoned it with celery bitters.
+            1 oz. Sombra Mezcal
+            .75 oz. Lime Juice
+            1 dash The Bitter Truth Celery Bitters
+            4 dashes Cholula
+            Stir with ice and strain into a chilled Collins glass rimmed with kosher salt, celery salt, and ground black pepper
+            Top with 6 oz. Victory Pilsner and garnish with freshly grated orange and lime zest
+            —Jim Meehan, Spring 2009
+
+  - name: BEE’S KNEES
+    recipe: |
+            In the 1930, when Frank Meier was tending the Ritz bar in Paris and creating simple, sophisticated cocktails like this one, calling something the Bee’s Knees was quite a compliment.
+            2 oz. Plymouth Gin
+            .75 oz. Lemon Juice
+            .75 oz. Honey Syrup
+            Shake with ice and strain into a chilled coupe
+            No garnish
+            —Frank Meier, The Artistry of Mixing Drinks, 1937
+
+  - name: BENTON’S OLD-FASHIONED
+    recipe: |
+            The crossroad of haute barnyard and barroom: Don Lee combined one of the finest pork products with one of our favorite bourbons.
+            2 oz. Benton’s Bacon Fat-Infused Four Roses Bourbon
+            .25 oz. Deep Mountain Grade B Maple Syrup
+            2 dashes Angostura Bitters
+            Stir with ice and strain into a chilled rocks glass filled
+            with one large cube
+            Garnish with an orange twist
+            —Don Lee, Winter 2007
+            Benton’s Bacon Fat-Infused
+            Four Roses Bourbon
+            1.5 oz. Benton’s Bacon Fat
+            1 750-ml bottle Four Roses Bourbon
+            On low heat, warm bacon fat in a small saucepan. Stir until it melts, about 5 minutes. Combine the molten fat and bourbon in a large nonreactive container and stir. Infuse for 4 hours, then place the container in the freezer for 2 hours.
+            Remove solid fat, fine-strain bourbon through a terry cloth or cheesecloth, and bottle
+            Yield: approx. 24 oz.
+
+  - name: BERLIONI
+    recipe: |
+            Gonçalo created this Negroni variation, inspired by Chad Solomon’s Cynar-accented Bensonhurst, in 2004, while working at the Victoria Bar in Berlin.
+            1.5 oz. Tanqueray Gin
+            .75 oz. Cynar
+            .5 oz. Noilly Prat Dry Vermouth
+            Stir with ice and strain into a chilled rocks glass filled with one large cube
+            Garnish with an orange twist
+            —Gonçalo de Sousa Monteiro, Berlin, 2004
+
+  - name: BIJOU
+    recipe: |
+            French for “jewel,” some believe the colors of the three primary ingredients represent precious stones: gin (diamond), sweet vermouth (ruby), and Green Chartreuse (emerald).
+            1 oz. Tanqueray Gin
+            1 oz. Dolin Sweet Vermouth
+            1 oz. Green Chartreuse
+            1 dash House Orange Bitters
+            Stir with ice and strain into a chilled coupe
+            Garnish with a cherry and a lemon twist
+            —C. F. Lawlor, The Mixicologist, 1895
+
+ingredients:
+  - name: Gin
+  - name: Vodka
+  - name: Green Chartreuse
+  - name: Yellow Chartreuse
+  - name: Cynar
+  - name: Reposado Tequila
+  - name: Silver Tequila
+  - name: Dry Vermouth
+  - name: Sweet Vermouth
+  - name: Bourbon
+  - name: Scotch
+  - name: Whiskey
+  - name: Lillet Blanc
+  - name: Cognac
+  - name: Mezcal
+  - name: Pineapple Juice
+  - name: Angostura Bitters
+  - name: Celery Bitters
+  - name: Orange Bitters
+  - name: Old Fashion Bitters
+  - name: Bitters
+  - name: Aperol
+  - name: Campari
+  - name: Honey Syrup
+  - name: Prosecco
+  - name: Lime Juice
+  - name: Orange Juice
+  - name: Lemon Juice
+  - name: Luxardo Maraschino Liqueur
+  - name: Melon Juice
+  - name: Rye
+  - name: Amber Rum
+  - name: Silver Rum
+  - name: Crème de Violette
+  - name: Crème de Cacao
+  - name: Absinthe
+  - name: Ginger Liqueur
+  - name: Egg
+  - name: Cucumber
+  - name: Elderflower Liqueur
+  - name: Club Soda
+  - name: Simple Syrup
+  - name: Maple Syrup
+  - name: Cholula
