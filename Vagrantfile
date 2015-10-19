@@ -16,10 +16,4 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :shell, path: 'bootstrap.sh', keep_color: true
-  # config.vm.provision "shell" do |s|
-  #   s.inline = "sudo npm install -g n"
-  #   s.inline = "sudo n stable"
-  #   s.inline = "sudo npm install -g ember-cli"
-  #   s.inline = "sudo npm install -g bower"
-  # end
 end
