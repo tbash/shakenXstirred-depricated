@@ -7,3 +7,7 @@ config["cocktails_ingredients"].each do |c_i|
   Cocktail.find(c_i["cocktail_id"].to_i).ingredients << Ingredient.find(c_i["ingredient_id"].split(",").map(&:to_i))
 end
 
+unless Rails.env.production? 
+  
+end
+
