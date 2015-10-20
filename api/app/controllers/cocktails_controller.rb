@@ -1,16 +1,21 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show, :update, :destroy]
+  before_action :set_cocktail, only: [:show,:show_ingredients, :update, :destroy]
 
   # GET /cocktails
   def index
     @cocktails = Cocktail.all
 
     render json: @cocktails
-  end
+  end 
 
   # GET /cocktails/1
   def show
     render json: @cocktail
+  end
+
+  # GET /cocktails/1/ingredients
+  def show_ingredients
+    render json: @cocktail.ingredients
   end
 
   # POST /cocktails
