@@ -13,7 +13,6 @@ cocktails:
             Garnish with an orange twist
             —Aisha Sharpe and Willy Shine, New York, 2008
 
-
   - name: 20TH CENTURY
     recipe: |
             This cocktail was credited to C. A. Tuck and named after the 20th Century Limited luxury train that traveled between New York City and Chicago from 1902 to 1967.
@@ -126,7 +125,7 @@ cocktails:
             This rich fall flip was created right after Orchard Apricot was released in the U.S. The stone fruit liqueur marries perfectly with Cognac.
             2 oz. Hine V.S.O.P. Cognac
             .75 oz. Rothman & Winter Orchard Apricot
-            .5 oz. Simple Syrup
+            .5 oz. Simple Syrup (Water + Sugar)
             1 Whole Organic Egg
             Dry-shake, then shake with ice and strain into a chilled fizz glass
             Garnish with grated nutmeg
@@ -244,12 +243,12 @@ ingredients:
   - name: Yellow Chartreuse
   - name: Cynar
   - name: Reposado Tequila
-  - name: Silver Tequila
+  - name: Blanco Tequila
   - name: Dry Vermouth
   - name: Sweet Vermouth
   - name: Bourbon
   - name: Scotch
-  - name: Whiskey
+  - name: Irish Whiskey
   - name: Lillet Blanc
   - name: Cognac
   - name: Mezcal
@@ -266,8 +265,9 @@ ingredients:
   - name: Lime Juice
   - name: Orange Juice
   - name: Lemon Juice
-  - name: Luxardo Maraschino Liqueur
+  - name: Grapefruit Juice
   - name: Melon Juice
+  - name: Luxardo Maraschino Liqueur
   - name: Rye
   - name: Amber Rum
   - name: Silver Rum
@@ -279,6 +279,58 @@ ingredients:
   - name: Cucumber
   - name: Elderflower Liqueur
   - name: Club Soda
-  - name: Simple Syrup
+  - name: Sugar
   - name: Maple Syrup
   - name: Cholula
+  - name: Water
+  - name: Chardonnay
+  - name: Apricot Liqueur
+  - name: Creole Shrubb
+  - name: Blanc Vermouth
+  - name: Orgeat
+  - name: Bacon
+
+cocktails_ingredients:
+  - cocktail_id: 1
+    ingredient_id: 6, 22, 29
+  - cocktail_id: 2
+    ingredient_id: 1, 36, 13, 28 
+  - cocktail_id: 3
+    ingredient_id: 7, 36, 28
+  - cocktail_id: 4
+    ingredient_id: 37, 46, 43 
+  - cocktail_id: 5
+    ingredient_id: 12, 47, 48, 49, 50, 15
+  - cocktail_id: 6
+    ingredient_id: 6,38, 35
+  - cocktail_id: 7
+    ingredient_id: 34, 26, 24
+  - cocktail_id: 8
+    ingredient_id: 1, 13, 3, 41, 19
+  - cocktail_id: 9
+    ingredient_id: 9, 23, 42
+  - cocktail_id: 10
+    ingredient_id: 32, 8, 16
+  - cocktail_id: 11
+    ingredient_id: 22, 25, 42, 2, 7
+  - cocktail_id: 12
+    ingredient_id: 14, 48, 43, 39
+  - cocktail_id: 13
+    ingredient_id: 1, 22, 40
+  - cocktail_id: 14
+    ingredient_id: 1, 50, 19
+  - cocktail_id: 15
+    ingredient_id: 1, 28, 31, 35
+  - cocktail_id: 16
+    ingredient_id: 34, 16, 48, 51
+  - cocktail_id: 17
+    ingredient_id: 15, 26, 18, 45
+  - cocktail_id: 18
+    ingredient_id: 1, 28, 24
+  - cocktail_id: 19
+    ingredient_id: 10, 44, 17, 52
+  - cocktail_id: 20
+    ingredient_id: 1, 5, 8
+  - cocktail_id: 21
+    ingredient_id: 1, 9, 3, 19
+

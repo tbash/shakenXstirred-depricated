@@ -1,0 +1,8 @@
+\d
+\d cocktails_id_seq
+\d
+\d cocktails_ingredients
+\dd
+\z cocktails_ingredients
+\z cocktails
+\s cocktails_ingredients

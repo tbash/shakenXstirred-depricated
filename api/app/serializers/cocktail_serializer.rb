@@ -1,3 +1,3 @@
 class CocktailSerializer < ActiveModel::Serializer
-  attributes :id, :name, :recipe, :can_make
+  attributes :id, :name, :recipe
 end
