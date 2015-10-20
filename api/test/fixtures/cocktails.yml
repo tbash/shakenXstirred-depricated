@@ -3,9 +3,7 @@
 one:
   name: MyString
   recipe: MyText
-  can_make: false
 
 two:
   name: MyString
   recipe: MyText
-  can_make: false

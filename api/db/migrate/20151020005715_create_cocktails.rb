@@ -3,7 +3,8 @@ class CreateCocktails < ActiveRecord::Migration
     create_table :cocktails do |t|
       t.string :name
       t.text :recipe
-      t.boolean :can_make, null: false, default: false
+
+      t.timestamps
     end
   end
 end

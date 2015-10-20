@@ -12,7 +12,7 @@ class CocktailsControllerTest < ActionController::TestCase
 
   test "should create cocktail" do
     assert_difference('Cocktail.count') do
-      post :create, params: { cocktail: { can_make: @cocktail.can_make, name: @cocktail.name, recipe: @cocktail.recipe } }
+      post :create, params: { cocktail: { name: @cocktail.name, recipe: @cocktail.recipe } }
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class CocktailsControllerTest < ActionController::TestCase
   end
 
   test "should update cocktail" do
-    patch :update, params: { id: @cocktail, cocktail: { can_make: @cocktail.can_make, name: @cocktail.name, recipe: @cocktail.recipe } }
+    patch :update, params: { id: @cocktail, cocktail: { name: @cocktail.name, recipe: @cocktail.recipe } }
     assert_response 200
   end
 
