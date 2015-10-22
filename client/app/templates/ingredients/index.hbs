@@ -1,0 +1,11 @@
+<table>
+  {{#each model as |ingredient|}}
+  <tr>
+     <td id="{{ ingredient.id }}">
+        {{ingredient.name}}
+    </td>
+    </tr>
+  {{else}}
+    <p>You can't make a cocktail with that selection!</p>
+  {{/each}}
+</table>

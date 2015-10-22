@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://33.33.33.100:3000/"
+    },
     modulePrefix: 'client',
     environment: environment,
     baseURL: '/',
