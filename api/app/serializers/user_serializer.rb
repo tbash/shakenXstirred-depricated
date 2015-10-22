@@ -1,4 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name
-  has_and_belongs_to_many :ingredients
+  attributes :id, :name, :password_digest
 end
