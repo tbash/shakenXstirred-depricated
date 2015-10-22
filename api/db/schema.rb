@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20151022011036) do
     t.string "name", null: false
   end
 
+  create_table "ingredients_users", id: false, force: :cascade do |t|
+    t.integer "ingredient_id"
+    t.integer "user_id"
+    t.index ["ingredient_id"], name: "index_ingredients_users_on_ingredient_id", using: :btree
+    t.index ["user_id"], name: "index_ingredients_users_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name",                 null: false
     t.string   "authentication_token"
@@ -42,13 +49,6 @@ ActiveRecord::Schema.define(version: 20151022011036) do
     t.datetime "updated_at",           null: false
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
     t.index ["name"], name: "index_users_on_name", unique: true, using: :btree
-  end
-
-  create_table "users_ingredients", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "ingredient_id"
-    t.index ["ingredient_id"], name: "index_users_ingredients_on_ingredient_id", using: :btree
-    t.index ["user_id"], name: "index_users_ingredients_on_user_id", using: :btree
   end
 
 end

@@ -8,6 +8,10 @@ config["cocktails_ingredients"].each do |c_i|
 end
 
 unless Rails.env.production? 
-  
+  User.create(config["users"])
+
+  config["users_ingredients"].each do |u_i|
+    User.find(u_i["user_id"].to_i).ingredients << Ingredient.find(u_i["ingredient_id"].split(",").map(&:to_i))
+  end
 end
 
