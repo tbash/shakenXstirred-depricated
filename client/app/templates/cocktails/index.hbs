@@ -1,0 +1,13 @@
+<table>
+  {{#each model as |cocktail|}}
+  <tr>
+     <td>
+      {{#link-to 'cocktail' cocktail}}
+        {{cocktail.name}}
+      {{/link-to}}
+    </td>
+    </tr>
+  {{else}}
+    <p>You can't make a cocktail with that selection!</p>
+  {{/each}}
+</table>
