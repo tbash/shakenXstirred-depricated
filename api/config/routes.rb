@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   get '/users/:id/ingredients',       to: 'users#show_ingredients'
-  post :authentication_token,          to: 'sessions#create'
+  post '/session',                    to: 'sessions#create'
 
   resources :ingredients
   get '/ingredients/:id/cocktails',   to: 'ingredients#show_cocktails'
