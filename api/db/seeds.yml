@@ -237,6 +237,7 @@ cocktails:
             —C. F. Lawlor, The Mixicologist, 1895
 
 ingredients:
+
   - name: Gin
   - name: Vodka
   - name: Green Chartreuse
@@ -291,6 +292,7 @@ ingredients:
   - name: Bacon
 
 cocktails_ingredients:
+
   - cocktail_id: 1
     ingredient_id: 6, 22, 29
   - cocktail_id: 2
@@ -333,4 +335,57 @@ cocktails_ingredients:
     ingredient_id: 1, 5, 8
   - cocktail_id: 21
     ingredient_id: 1, 9, 3, 19
+
+users:
+
+  - name: tbash
+    password: password
+    password_confirmation: password
+  
+  - name: teebash
+    password: password
+    password_confirmation: password
+
+  - name: rick
+    password: password
+    password_confirmation: password
+  
+  - name: step
+    password: password
+    password_confirmation: password
+
+  - name: dude
+    password: password
+    password_confirmation: password
+  
+  - name: bargeek
+    password: password
+    password_confirmation: password
+
+  - name: lady
+    password: password
+    password_confirmation: password
+  
+  - name: nerd
+    password: password
+    password_confirmation: password
+
+users_ingredients:
+
+  - user_id: 1
+    ingredient_id: 6, 22, 29, 1, 9, 3, 19
+  - user_id: 2
+    ingredient_id: 1, 36, 13, 28, 6, 22, 29,  9, 3, 19
+  - user_id: 3
+    ingredient_id: 7, 36, 28
+  - user_id: 4
+    ingredient_id: 37, 46, 43 
+  - user_id: 5
+    ingredient_id: 12, 47, 48, 49, 50, 15, 1, 36, 13, 28, 6, 22, 29,  9, 3, 19
+  - user_id: 6
+    ingredient_id: 38, 35
+  - user_id: 7
+    ingredient_id:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52
+  - user_id: 8
+    ingredient_id: 1, 13, 3, 41, 19
 
