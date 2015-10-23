@@ -1,10 +1,16 @@
 <h2>sXs</h2>
 
-<ul>
-  <li>{{ link-to 'Cocktails' 'cocktails' }}</li>
-  <li>{{ link-to 'Ingredients' 'ingredients'  }}</li>
-</ul>
-
-<hr>
-
-{{outlet}}
+<div class="menu">
+  <ul>
+  {{#if session.isAuthenticated}}
+     <li>{{ link-to 'Cocktails' 'cocktails' }}</li>
+     <li>{{ link-to 'Ingredients' 'ingredients'  }}</li>
+     <a id="logout" {{action 'invalidateSession'}}>Logout</a>
+  {{else}}
+     <li>{{#link-to 'login'}}Login{{/link-to}}</li>
+  {{/if}}
+   </ul>
+</div>
+<div class="main">
+  {{outlet}}
+</div>
