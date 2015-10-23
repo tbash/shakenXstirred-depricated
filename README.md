@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/teebash/shaken_slash_stirred.png?label=ready&title=Ready&style=flat-square)](https://waffle.io/teebash/shaken_slash_stirred)
+[![Stories in Ready](https://badge.waffle.io/teebash/shaken_slash_stirred.png?label=ready&title=Ready)](https://waffle.io/teebash/shaken_slash_stirred)
 ## Shaken/Stirred
 
 
