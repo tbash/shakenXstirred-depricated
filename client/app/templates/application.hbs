@@ -1,16 +1,21 @@
-<h2>sXs</h2>
-
-<div class="menu">
-  <ul>
-  {{#if session.isAuthenticated}}
-     <li>{{ link-to 'Cocktails' 'cocktails' }}</li>
-     <li>{{ link-to 'Ingredients' 'ingredients'  }}</li>
-     <a id="logout" {{action 'invalidateSession'}}>Logout</a>
-  {{else}}
-     <li>{{#link-to 'login'}}Login{{/link-to}}</li>
-  {{/if}}
+<div class="mdl-grid">
+{{#mdl-card title='login right here'}}
+  <div class="mdl-card__supporting-text">
+   <ul>
+    {{#if session.isAuthenticated}}
+       <li>{{ link-to 'Cocktails' 'cocktails' }}</li>
+       <li>{{ link-to 'Ingredients' 'ingredients'  }}</li>
+       <a id="logout" {{action 'invalidateSession'}}>Logout</a>
+    {{else}}
+       <li>{{#link-to 'login'}}Login{{/link-to}}</li>
+    {{/if}}
    </ul>
+  </div>
+  {{#mdl-card-actions}}
+    {{mdl-button text='Test Button'}}
+  {{/mdl-card-actions}}
+{{/mdl-card}}
 </div>
-<div class="main">
-  {{outlet}}
-</div>
+
+
+{{outlet}}

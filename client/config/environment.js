@@ -3,7 +3,8 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
-      'connect-src': "'self' http://33.33.33.100:3000/"
+      'connect-src': "'self' http://33.33.33.100:3000/",
+      'font-src': "'self' http://fonts.gstatic.com"
     },
     modulePrefix: 'client',
     environment: environment,
@@ -14,6 +15,9 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
     },
 
     APP: {
