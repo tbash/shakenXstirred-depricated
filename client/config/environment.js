@@ -4,7 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
       'connect-src': "'self' http://33.33.33.100:3000/",
-      'font-src': "'self' http://fonts.gstatic.com"
+      'font-src': "'self' http://fonts.gstatic.com",
+      'style-src': "'self' http://fonts.googleapis.com"
     },
     modulePrefix: 'client',
     environment: environment,
@@ -16,10 +17,7 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-    sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
-    },
-
+    
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
