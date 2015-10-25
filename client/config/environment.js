@@ -5,7 +5,6 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'font-src': "'self' https://fonts.gstatic.com",
       'connect-src': "'self' http://33.33.33.100:3000/",
-      'img-src': "'self' data:"
     },
     modulePrefix: 'client',
     environment: environment,
@@ -17,7 +16,7 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
