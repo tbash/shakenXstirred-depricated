@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-  # GET /cocktails/1/ingredients
+  # GET /users/1/ingredients
   def show_ingredients
     render json: @user.ingredients
   end

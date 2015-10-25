@@ -13,6 +13,7 @@ Router.map(function() {
   });
 
   this.route('ingredients', {}, function() {});
+  this.route('logout', {});
 });
 
 export default Router;
