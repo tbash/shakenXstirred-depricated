@@ -5,6 +5,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'font-src': "'self' https://fonts.gstatic.com",
       'connect-src': "'self' http://33.33.33.100:3000/",
+      'img-src': "'self' data:"
     },
     modulePrefix: 'client',
     environment: environment,
