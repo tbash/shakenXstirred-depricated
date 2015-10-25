@@ -1,33 +1,48 @@
 <div id="paper-wormhole"></div>
 {{#paper-toolbar}}
-{{#paper-menu as |menu|}}
+{{#paper-menu width=4 as |menu|}}
   {{#paper-button target=menu action="toggleMenu" icon-button=true}}
       {{paper-icon class="md-menu-origin" icon="more-vert"}}
   {{/paper-button}}
 {{else}}
   {{#paper-menu-item}}
+    {{paper-icon icon="home" class="md-menu-align-target"}}
     <b>Menu</b>
   {{/paper-menu-item}}
   {{#if session.isAuthenticated}}
     {{#paper-menu-item action="transitionTo" param="cocktails"}}
+      {{paper-icon icon="local-bar" class="md-menu-align-target"}}
       <span>Cocktails</span>
     {{/paper-menu-item}}
     {{#paper-menu-item action="transitionTo" param="ingredients"}}
-      <span>Ingredients</span>
+      {{paper-icon icon="check-box" class="md-menu-align-target"}}
+      <span>Spirits</span>
     {{/paper-menu-item}}
     {{#paper-menu-item action="invalidateSession"}}
+      {{paper-icon icon="remove-circle" class="md-menu-align-target"}}
       <span>Logout</span>
     {{/paper-menu-item}}
   {{else}}
     {{#paper-menu-item action="transitionTo" param="login"}}
+      {{paper-icon icon="person" class="md-menu-align-target"}}
       <span>Login</span>
     {{/paper-menu-item}}
     {{#paper-menu-item action="transitionTo" param="signup"}}
+      {{paper-icon icon="person-add" class="md-menu-align-target"}}
       <span>Signup</span>
     {{/paper-menu-item}}
   {{/if}}
+  {{#paper-menu-item action="transitionTo"}}
+    {{paper-icon icon="cancel" class="md-menu-align-target"}}
+    <span>Cancel</span>
+  {{/paper-menu-item}}
 {{/paper-menu}}
 {{/paper-toolbar}}
 {{#paper-content class="md-padding"}}
+  <div class="c-notification__container">
+  {{#each notifications as |notification|}}
+    {{notification-message notification=notification}}
+  {{/each}}
+  </div>
   {{outlet}}
 {{/paper-content}}
