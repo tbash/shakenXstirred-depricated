@@ -5,6 +5,9 @@
       {{paper-icon class="md-menu-origin" icon="more-vert"}}
   {{/paper-button}}
 {{else}}
+  {{#paper-menu-item}}
+    <b>Menu</b>
+  {{/paper-menu-item}}
   {{#if session.isAuthenticated}}
     {{#paper-menu-item action="transitionTo" param="cocktails"}}
       <span>Cocktails</span>

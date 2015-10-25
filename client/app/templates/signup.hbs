@@ -1,9 +1,21 @@
 <h3>Signup</h3>
 {{#paper-content}}
   <div class="container">
-    {{paper-input label="Name" value=name}}
-    {{paper-input label="Password" type="password" value=password}}
-    {{paper-input label="Password Confirmation" type="password" value=password_confirmation}}
-    {{#paper-button raised=true action="create" param=true}}Signup{{/paper-button}}    
+    {{paper-input label="Username" required=true required-errortext="Username is required" value=name}}
+    {{paper-input label="Password" type="password" required=true  required-errortext="Password is required" value=password}}
+    {{paper-input label="Password Confirmation" type="password" required=true  required-errortext="Please confirm your password" value=password_confirmation}}
+    {{#if name}}
+      {{#if password}}
+        {{#if password_confirmation}}
+          {{#paper-button raised=true action="create" param=true disabled=false}}Signup{{/paper-button}}
+        {{else}}
+          {{#paper-button raised=true action="create" param=true disabled=true}}Signup{{/paper-button}}
+        {{/if}}
+      {{else}}
+        {{#paper-button raised=true action="create" param=true disabled=true}}Signup{{/paper-button}}
+      {{/if}}
+    {{else}}
+      {{#paper-button raised=true action="create" param=true disabled=true}}Signup{{/paper-button}}
+    {{/if}}
   </div>
 {{/paper-content}}
