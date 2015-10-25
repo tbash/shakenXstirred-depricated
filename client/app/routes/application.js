@@ -5,6 +5,9 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
   actions: {
     invalidateSession() {
       this.get('session').invalidate();
+    },
+    transitionTo(route) {
+      this.transitionTo(route);
     }
   }
 });

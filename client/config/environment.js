@@ -3,9 +3,8 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
+      'font-src': "'self' https://fonts.gstatic.com",
       'connect-src': "'self' http://33.33.33.100:3000/",
-      'font-src': "'self' http://fonts.gstatic.com",
-      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com"
     },
     modulePrefix: 'client',
     environment: environment,

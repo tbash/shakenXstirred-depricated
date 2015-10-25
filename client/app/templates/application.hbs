@@ -1,20 +1,30 @@
-<div {{action 'invalidateSession' on='subumit'}}>
-  {{#mdl-nav
-    title='Fixed Drawer Example'
-    fixedHeader=true
-    mobileTitle='Fixed Drawer'}}
-    {{#if session.isAuthenticated}}
-      {{mdl-nav-item name='cocktails' route='cocktails' inHeader=false}}
-      {{mdl-nav-item name='ingredients' route='ingredients' inHeader=false}}
-      {{mdl-nav-item name='logout' route='logout' inHeader=false}}
-    {{else}}
-      {{mdl-nav-item name='login' route='login' inHeader=false}}
-      {{mdl-nav-item name='sign up' route='login' inHeader=false}}
-    {{/if}}
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--12-col">
-        {{outlet}}
-      </div>
-    </div>
-  {{/mdl-nav}}
-</div>
+<div id="paper-wormhole"></div>
+{{#paper-toolbar}}
+{{#paper-menu as |menu|}}
+  {{#paper-button target=menu action="toggleMenu" icon-button=true}}
+      {{paper-icon class="md-menu-origin" icon="more-vert"}}
+  {{/paper-button}}
+{{else}}
+  {{#if session.isAuthenticated}}
+    {{#paper-menu-item action="transitionTo" param="cocktails"}}
+      <span>Cocktails</span>
+    {{/paper-menu-item}}
+    {{#paper-menu-item action="transitionTo" param="ingredients"}}
+      <span>Ingredients</span>
+    {{/paper-menu-item}}
+    {{#paper-menu-item action="invalidateSession"}}
+      <span>Logout</span>
+    {{/paper-menu-item}}
+  {{else}}
+    {{#paper-menu-item action="transitionTo" param="login"}}
+      <span>Login</span>
+    {{/paper-menu-item}}
+    {{#paper-menu-item action="transitionTo" param="signup"}}
+      <span>Signup</span>
+    {{/paper-menu-item}}
+  {{/if}}
+{{/paper-menu}}
+{{/paper-toolbar}}
+{{#paper-content class="md-padding"}}
+  {{outlet}}
+{{/paper-content}}
