@@ -11,7 +11,6 @@ export default Ember.Controller.extend({
       const { name, password } = this.getProperties('name', 'password');
       if (nameRegex.test(name) && passwordRegex.test(password)) {
         return this.get('session').authenticate('authenticator:custom', name, password);
-        debugger;
       }
       else {
         this.notifications.addNotification({

@@ -42,7 +42,6 @@ export default Ember.Controller.extend({
         });
         var self = this;
         user.save().then(function() {
-          debugger;
           self.get('session').authenticate('authenticator:custom', name, password);
         });
         self.notifications.addNotification({
