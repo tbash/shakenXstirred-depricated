@@ -1,16 +1,30 @@
-<h2>sXs</h2>
-
-<div class="menu">
-  <ul>
+<div id="paper-wormhole"></div>
+{{#paper-toolbar}}
+{{#paper-menu as |menu|}}
+  {{#paper-button target=menu action="toggleMenu" icon-button=true}}
+      {{paper-icon class="md-menu-origin" icon="more-vert"}}
+  {{/paper-button}}
+{{else}}
   {{#if session.isAuthenticated}}
-     <li>{{ link-to 'Cocktails' 'cocktails' }}</li>
-     <li>{{ link-to 'Ingredients' 'ingredients'  }}</li>
-     <a id="logout" {{action 'invalidateSession'}}>Logout</a>
+    {{#paper-menu-item action="transitionTo" param="cocktails"}}
+      <span>Cocktails</span>
+    {{/paper-menu-item}}
+    {{#paper-menu-item action="transitionTo" param="ingredients"}}
+      <span>Ingredients</span>
+    {{/paper-menu-item}}
+    {{#paper-menu-item action="invalidateSession"}}
+      <span>Logout</span>
+    {{/paper-menu-item}}
   {{else}}
-     <li>{{#link-to 'login'}}Login{{/link-to}}</li>
+    {{#paper-menu-item action="transitionTo" param="login"}}
+      <span>Login</span>
+    {{/paper-menu-item}}
+    {{#paper-menu-item action="transitionTo" param="signup"}}
+      <span>Signup</span>
+    {{/paper-menu-item}}
   {{/if}}
-   </ul>
-</div>
-<div class="main">
+{{/paper-menu}}
+{{/paper-toolbar}}
+{{#paper-content class="md-padding"}}
   {{outlet}}
-</div>
+{{/paper-content}}

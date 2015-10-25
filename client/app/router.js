@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
+  this.route('signup');
 
   this.resource('cocktails', function() {
     this.resource('cocktail', { path: '/:cocktail_id' });
