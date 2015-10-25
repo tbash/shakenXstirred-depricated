@@ -1,0 +1,9 @@
+<h3>Signup</h3>
+{{#paper-content}}
+  <div class="container">
+    {{paper-input label="Name" value=name}}
+    {{paper-input label="Password" type="password" value=password}}
+    {{paper-input label="Password Confirmation" type="password" value=password_confirmation}}
+    {{#paper-button raised=true action="create" param=true}}Signup{{/paper-button}}    
+  </div>
+{{/paper-content}}
