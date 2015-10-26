@@ -1,13 +1,22 @@
-<table>
-  {{#each model as |cocktail|}}
-  <tr>
-     <td>
-      {{#link-to 'cocktail' cocktail}}
-        {{cocktail.name}}
-      {{/link-to}}
-    </td>
-    </tr>
-  {{else}}
-    <p>You can't make a cocktail with that selection!</p>
-  {{/each}}
-</table>
+<div class="doc-content">
+  <h3>List of all Cocktails</h3>
+  {{#paper-content class="md-whiteframe-z1"}}
+    {{#paper-list}}
+      {{#paper-subheader class="md-no-sticky"}}This is a list of all available cocktail recipes.{{/paper-subheader}}
+    
+      {{#each model as |cocktail|}}
+      {{paper-divider}}
+      {{#paper-item class="md-3-line" action="showCocktail" param=cocktail}}
+      <div class="md-list-item-text">
+        <h3>{{cocktail.name}}</h3>
+        <p>this, will, list, ingredients</p>
+      </div>
+      {{/paper-item}}
+      {{else}}
+       {{#paper-item}}
+          <p>Something is not right here......</p>
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+  {{/paper-content}}
+</div>
