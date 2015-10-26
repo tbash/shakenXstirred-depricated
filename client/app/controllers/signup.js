@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   
   actions: {
     create: function() {
-      var nameRegex = /^[a-z0-9_-]{1,16}$/;
+      var nameRegex = /^[A-Za-z0-9_-]{1,16}$/;
       var passwordRegex = /^[A-Za-z0-9_-]{8,18}$/;
       var name = this.get('name').toLowerCase();
       var password = this.get('password');
