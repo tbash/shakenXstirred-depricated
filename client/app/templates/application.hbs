@@ -1,14 +1,15 @@
 <div id="paper-wormhole"></div>
-{{#paper-toolbar}}
+{{#paper-toolbar style="position:fixed"}}
+<div class="md-toolbar-tools">
 {{#paper-menu width=4 as |menu|}}
   {{#paper-button target=menu action="toggleMenu" icon-button=true}}
       {{paper-icon class="md-menu-origin" icon="more-vert"}}
   {{/paper-button}}
 {{else}}
   {{#paper-menu-item}}
-    {{paper-icon icon="home" class="md-menu-align-target"}}
     <b>Menu</b>
   {{/paper-menu-item}}
+  <md-divider></md-divider>
   {{#if session.isAuthenticated}}
     {{#paper-menu-item action="transitionTo" param="cocktails"}}
       {{paper-icon icon="local-bar" class="md-menu-align-target"}}
@@ -37,6 +38,11 @@
     <span>Cancel</span>
   {{/paper-menu-item}}
 {{/paper-menu}}
+  <span class="md-breadcrumb-page">
+    <img src="images/white_logo.png" width=50 />&nbsp;&nbsp;
+  </span>
+  <h3>shakenXstirred</h3>
+</div>
 {{/paper-toolbar}}
 {{#paper-content class="md-padding"}}
   <div class="c-notification__container">
