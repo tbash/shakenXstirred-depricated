@@ -33,7 +33,8 @@ class UsersController < ApplicationController
       render json: @user.errors, status: :unprocessable_entity
     end
   end
-
+  
+  # PATCH/PUT /user/1/update_ingredients
   def update_ingredients(ingredient_ary)
     byebug
     @user.ingredients.replace(Ingredient.find(ingredient_ary))
