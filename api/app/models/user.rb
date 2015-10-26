@@ -1,12 +1,8 @@
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :ingredients
+  has_many :mixologies
+  has_many :cocktails, through: :mixologies
+  has_many :inventories
+  has_many :ingredients, through: :inventories
   has_secure_password
-
-  def as_json(options={})
-    {
-      id: self.id,
-      name: self.name
-    }
-  end
 
 end

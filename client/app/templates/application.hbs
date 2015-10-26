@@ -9,7 +9,7 @@
   {{#paper-menu-item}}
     <b>Menu</b>
   {{/paper-menu-item}}
-  <md-divider></md-divider>
+  {{paper-divider}}
   {{#if session.isAuthenticated}}
     {{#paper-menu-item action="transitionTo" param="cocktails"}}
       {{paper-icon icon="local-bar" class="md-menu-align-target"}}
