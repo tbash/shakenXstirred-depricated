@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients]
+  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails]
 
   # GET /users
   def index
@@ -16,6 +16,11 @@ class UsersController < ApplicationController
   # GET /users/1/ingredients
   def show_ingredients
     render json: @user.ingredients
+  end
+
+  # GET /users/1/cocktails
+  def show_cocktails
+    render json: @user.cocktails
   end
 
   # POST /users
