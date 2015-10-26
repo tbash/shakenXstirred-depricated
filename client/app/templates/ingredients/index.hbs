@@ -1,11 +1,19 @@
-<table>
-  {{#each model as |ingredient|}}
-  <tr>
-     <td id="{{ ingredient.id }}">
-        {{ingredient.name}}
-    </td>
-    </tr>
-  {{else}}
-    <p>You can't make a cocktail with that selection!</p>
-  {{/each}}
-</table>
+<div class="doc-content">
+  <h3>List of Spirits</h3>
+  {{#paper-content class="md-whiteframe-z1 list-demo list-controls-demo"}}
+    {{#paper-list}}
+      {{#paper-subheader class="md-no-sticky"}}Check off what you have!{{/paper-subheader}}
+    
+      {{#each model as |ingredient|}}
+      {{#paper-item}}
+        <p>{{ingredient.name}}</p>
+        {{paper-checkbox class="md-secondary" checked=ingredient.id}}
+      {{/paper-item}}
+      {{else}}
+       {{#paper-item}}
+          <p>Somethings not right here......</p>
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+  {{/paper-content}}
+</div>
