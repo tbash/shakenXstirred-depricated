@@ -2,7 +2,7 @@
 
 # compiled output
 tmp
-
+client/dist
 # dependencies
 client/node_modules
 client/bower_components
