@@ -1,1 +1,9 @@
+@import '_variables';
 @import 'ember-paper';
+md-toolbar{
+  position:fixed;
+}
+
+.md-padding{
+  padding:70px;
+}
