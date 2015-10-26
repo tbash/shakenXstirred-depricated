@@ -1,12 +1,6 @@
 class Ingredient < ActiveRecord::Base
-  has_and_belongs_to_many :cocktails
-  has_and_belongs_to_many :users
-
-  def as_json(options={})
-    {
-      id: self.id,
-      name: self.name
-    }
-  end
-
+  has_many :mixtures
+  has_many :cocktails, through: :mixtures
+  has_many :inventories
+  has_many :users, through: :inventories
 end

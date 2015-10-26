@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022011036) do
+ActiveRecord::Schema.define(version: 20151026082305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,22 +23,23 @@ ActiveRecord::Schema.define(version: 20151022011036) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "cocktails_ingredients", id: false, force: :cascade do |t|
-    t.integer "cocktail_id"
-    t.integer "ingredient_id"
-    t.index ["cocktail_id"], name: "index_cocktails_ingredients_on_cocktail_id", using: :btree
-    t.index ["ingredient_id"], name: "index_cocktails_ingredients_on_ingredient_id", using: :btree
-  end
-
   create_table "ingredients", force: :cascade do |t|
     t.string "name", null: false
   end
 
-  create_table "ingredients_users", id: false, force: :cascade do |t|
-    t.integer "ingredient_id"
+  create_table "inventories", force: :cascade do |t|
     t.integer "user_id"
-    t.index ["ingredient_id"], name: "index_ingredients_users_on_ingredient_id", using: :btree
-    t.index ["user_id"], name: "index_ingredients_users_on_user_id", using: :btree
+    t.integer "ingredient_id"
+  end
+
+  create_table "mixologies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "cocktail_id"
+  end
+
+  create_table "mixtures", force: :cascade do |t|
+    t.integer "cocktail_id"
+    t.integer "ingredient_id"
   end
 
   create_table "users", force: :cascade do |t|
