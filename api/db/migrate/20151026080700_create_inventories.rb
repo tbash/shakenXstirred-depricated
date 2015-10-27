@@ -3,6 +3,8 @@ class CreateInventories < ActiveRecord::Migration
     create_table :inventories do |t|
       t.integer :user_id
       t.integer :ingredient_id
+
+      t.timestamps
     end
   end
 end
