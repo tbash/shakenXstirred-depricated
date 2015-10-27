@@ -20,6 +20,17 @@ class UsersController < ApplicationController
 
   # GET /users/1/cocktails
   def show_cocktails
+    @inventory = Inventory.where(user_id: @user.id)
+    @mixology =  Mixology.where(user_id: @user.id)
+    if @mixology.blank? || (@inventory.last.try(:updated_at) > @mixology.last.try(:updated_at))
+      @user.cocktails.clear
+      Cocktail.all.each do |cocktail|
+        if (cocktail.ingredients - @user.ingredients).empty?
+          @user.cocktails << cocktail
+        end
+      end
+    end
+
     render json: @user.cocktails
   end
 
@@ -59,16 +70,6 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
-    end
-    
-    def set_cocktails
-      cocktail_ary = Array.new
-      Cocktail.all.each do |cocktail|
-        unless (cocktail.ingredients - @user.ingredients).empty?
-          cocktail_ary << cocktail
-        end
-      end
-      @user.cocktails.replace(cocktail_ary)
     end
 
     # Only allow a trusted parameter "white list" through.

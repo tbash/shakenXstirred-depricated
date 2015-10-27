@@ -17,24 +17,28 @@ ActiveRecord::Schema.define(version: 20151026082305) do
   enable_extension "plpgsql"
 
   create_table "cocktails", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.text     "recipe",     null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name",   null: false
+    t.text   "recipe", null: false
+    t.index ["name"], name: "index_cocktails_on_name", unique: true, using: :btree
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name", null: false
+    t.index ["name"], name: "index_ingredients_on_name", unique: true, using: :btree
   end
 
   create_table "inventories", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "ingredient_id"
+    t.integer  "user_id"
+    t.integer  "ingredient_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "mixologies", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "cocktail_id"
+    t.integer  "user_id"
+    t.integer  "cocktail_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "mixtures", force: :cascade do |t|
