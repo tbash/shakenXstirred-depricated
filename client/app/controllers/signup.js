@@ -47,16 +47,16 @@ export default Ember.Controller.extend({
               message: 'you have successfully signed up as ' + name,
               type: 'success',
               autoClear: true,
-              clearDuration: 2000
+              clearDuration: 3000
             });
+          });
           }, function(error) {
             self.notifications.addNotification({
               message: 'that username already exists',
               type: 'error',
               autoClear: true,
-              clearDuration: 2000
+              clearDuration: 3000
             });
-          });
         });
       }
     }
