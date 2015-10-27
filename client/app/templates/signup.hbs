@@ -8,7 +8,11 @@
     {{#if name}}
       {{#if password}}
         {{#if password_confirmation}}
-          {{#paper-button raised=true action="create" param=true disabled=false}}Signup{{/paper-button}}
+          {{#if date}}
+            {{#paper-button raised=true action="create" param=true disabled=false}}Signup{{/paper-button}}
+          {{else}}
+            {{#paper-button raised=true action="create" param=true disabled=true}}Signup{{/paper-button}}
+          {{/if}}
         {{else}}
           {{#paper-button raised=true action="create" param=true disabled=true}}Signup{{/paper-button}}
         {{/if}}
