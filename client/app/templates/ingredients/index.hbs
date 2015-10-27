@@ -1,13 +1,12 @@
 <div class="doc-content">
-  <h3>List of Spirits</h3>
+  {{#paper-button raised=true floating=true action="updateInventory"}}Update Inventory{{/paper-button}}
   {{#paper-content class="md-whiteframe-z1"}}
     {{#paper-list}}
-      {{#paper-subheader class="md-no-sticky"}}Check off what you have!{{/paper-subheader}}
-    
+      {{#paper-subheader class="md-no-sticky"}}Inventory of your spirits{{/paper-subheader}}
       {{#each model as |ingredient|}}
-      {{#paper-item}}
+      {{#paper-item action="addToInventory" value=ingredient.name}}
         <p>{{ingredient.name}}</p>
-        {{paper-checkbox class="md-secondary" checked=ingredient.id}}
+        {{paper-checkbox class="md-secondary"  checked=ingredient}}
       {{/paper-item}}
       {{else}}
        {{#paper-item}}

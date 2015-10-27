@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails]
+  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails, :update_cocktails]
 
   # GET /users
   def index
@@ -20,17 +20,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/cocktails
   def show_cocktails
-    @inventory = Inventory.where(user_id: @user.id)
-    @mixology =  Mixology.where(user_id: @user.id)
-    if @mixology.blank? || (@inventory.last.try(:updated_at) > @mixology.last.try(:updated_at))
-      @user.cocktails.clear
-      Cocktail.all.each do |cocktail|
-        if (cocktail.ingredients - @user.ingredients).empty?
-          @user.cocktails << cocktail
-        end
-      end
-    end
-
     render json: @user.cocktails
   end
 
@@ -45,11 +34,17 @@ class UsersController < ApplicationController
     end
   end
   
-  # PATCH/PUT /user/1/update_ingredients
-  def update_ingredients(ingredient_ary)
+  # POST /user/1/update_cocktails
+  def update_cocktails
     byebug
-    @user.ingredients.replace(Ingredient.find(ingredient_ary))
-    set_cocktails
+    @user.ingredients.clear
+    @user.cocktails.clear
+    @user.ingredients.replace(Ingredient.find(params[:ingredient_ids]))
+    Cocktail.all.each do |cocktail|
+      if (cocktail.ingredients - @user.ingredients).empty?
+        @user.cocktails << cocktail
+      end
+    end
   end
 
   # PATCH/PUT /users/1
