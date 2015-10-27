@@ -1,11 +1,11 @@
 import Ember from 'ember';
- 
+
 export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
-  
+
   actions: {
     create: function() {
-      var nameRegex = /^[A-Za-z0-9_-]{1,16}$/;
+      var nameRegex = /^[a-z0-9_-]{3,16}$/;
       var passwordRegex = /^[A-Za-z0-9_-]{8,18}$/;
       var name = this.get('name').toLowerCase();
       var password = this.get('password');
