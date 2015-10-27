@@ -16,23 +16,23 @@ export default Ember.Controller.extend({
             message: 'you have successfully logged in as ' + name,
             type: 'success',
             autoClear: true,
-            clearDuration: 2000
+            clearDuration: 3000
           });
         }, function(error) {
           self.notifications.addNotification({
-            message: 'that name and password combo does not exist',
+            message: 'that username and password combo does not exist',
             type: 'error',
             autoClear: true,
-            clearDuration: 2000
+            clearDuration: 3000
           });
         });
       }
       else {
         this.notifications.addNotification({
-          message: 'that name and password combo does not exist',
+          message: 'that username and password combo does not exist',
           type: 'error',
           autoClear: true,
-          clearDuration: 2000
+          clearDuration: 3000
         });
       }
     }
