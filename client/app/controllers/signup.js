@@ -10,6 +10,10 @@ export default Ember.Controller.extend({
       var name = this.get('name').toLowerCase();
       var password = this.get('password');
       var password_confirmation = this.get('password_confirmation');
+      var dob = this.get('date');
+      var today = Date.now();
+      var twentyOne = today - Date.parse("January 1, 1991, 00:00:00 UTC");
+      dob = Date.parse(dob);
       if (nameRegex.test(name) === false) {
         this.notifications.addNotification({
           message: 'username can only contain letters, numbers, underscores, or hyphens',
@@ -29,6 +33,14 @@ export default Ember.Controller.extend({
       else if (password !== password_confirmation) {
         this.notifications.addNotification({
           message: 'password confirmation does not match password',
+          type: 'error',
+          autoClear: true,
+          clearDuration: 3000
+        });
+      }
+      else if (dob > twentyOne) {
+        this.notifications.addNotification({
+          message: 'you must twenty-one or older or lying to use this service',
           type: 'error',
           autoClear: true,
           clearDuration: 3000
