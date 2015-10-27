@@ -43,7 +43,7 @@ export default Ember.Controller.extend({
           message: 'you must twenty-one or older or lying to use this service',
           type: 'error',
           autoClear: true,
-          clearDuration: 3000
+          clearDuration: 4000
         });
       }
       else {
