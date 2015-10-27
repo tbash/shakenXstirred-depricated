@@ -1,29 +1,29 @@
 import Ember from 'ember';
- 
+
 export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
-  
+
   actions: {
     create: function() {
-      var nameRegex = /^[A-Za-z0-9_-]{1,16}$/;
+      var nameRegex = /^[a-z0-9_-]{3,16}$/;
       var passwordRegex = /^[A-Za-z0-9_-]{8,18}$/;
       var name = this.get('name').toLowerCase();
       var password = this.get('password');
       var password_confirmation = this.get('password_confirmation');
       if (nameRegex.test(name) === false) {
         this.notifications.addNotification({
-          message: 'name does not match the regex pattern',
+          message: 'username can only contain letters, numbers, underscores, or hyphens',
           type: 'error',
           autoClear: true,
-          clearDuration: 2000
+          clearDuration: 4000
         });
       }
       else if (passwordRegex.test(password) === false) {
         this.notifications.addNotification({
-          message: 'password does not match the regex pattern',
+          message: 'password can only contain letters, numbers, underscores, or hyphens',
           type: 'error',
           autoClear: true,
-          clearDuration: 2000
+          clearDuration: 4000
         });
       }
       else if (password !== password_confirmation) {
@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
           message: 'password confirmation does not match password',
           type: 'error',
           autoClear: true,
-          clearDuration: 2000
+          clearDuration: 3000
         });
       }
       else {
@@ -42,13 +42,21 @@ export default Ember.Controller.extend({
         });
         var self = this;
         user.save().then(function() {
-          self.get('session').authenticate('authenticator:custom', name, password);
-        });
-        self.notifications.addNotification({
-          message: 'you have successfully signed up as ' + name,
-          type: 'success',
-          autoClear: true,
-          clearDuration: 2000
+          self.get('session').authenticate('authenticator:custom', name, password).then(function(){
+            self.notifications.addNotification({
+              message: 'you have successfully signed up as ' + name,
+              type: 'success',
+              autoClear: true,
+              clearDuration: 3000
+            });
+          });
+          }, function(error) {
+            self.notifications.addNotification({
+              message: 'that username already exists',
+              type: 'error',
+              autoClear: true,
+              clearDuration: 3000
+            });
         });
       }
     }
