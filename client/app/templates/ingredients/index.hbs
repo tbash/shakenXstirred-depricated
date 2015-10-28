@@ -1,5 +1,5 @@
 <div class="doc-content">
-  {{#paper-button raised=true floating=true action="updateInventory"}}Update Inventory{{/paper-button}}
+  {{#paper-button raised=true action="updateInventory"}}Update Inventory{{/paper-button}}
   {{#paper-content class="md-whiteframe-z1"}}
     {{#paper-list}}
       {{#paper-subheader class="md-no-sticky"}}Inventory of your spirits{{/paper-subheader}}
@@ -9,7 +9,7 @@
         {{paper-checkbox class="md-secondary"  checked=ingredient}}
       {{/paper-item}}
       {{else}}
-       {{#paper-item}}
+        {{#paper-item}}
           <p>Somethings not right here......</p>
         {{/paper-item}}
       {{/each}}

@@ -28,17 +28,13 @@ ActiveRecord::Schema.define(version: 20151026082305) do
   end
 
   create_table "inventories", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "ingredient_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer "user_id"
+    t.integer "ingredient_id"
   end
 
   create_table "mixologies", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "cocktail_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer "user_id"
+    t.integer "cocktail_id"
   end
 
   create_table "mixtures", force: :cascade do |t|

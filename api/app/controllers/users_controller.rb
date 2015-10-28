@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails, :update_cocktails]
+  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails, :update_ingredients]
 
   # GET /users
   def index
@@ -34,17 +34,13 @@ class UsersController < ApplicationController
     end
   end
   
-  # POST /user/1/update_cocktails
-  def update_cocktails
-    byebug
-    @user.ingredients.clear
-    @user.cocktails.clear
-    @user.ingredients.replace(Ingredient.find(params[:ingredient_ids]))
-    Cocktail.all.each do |cocktail|
-      if (cocktail.ingredients - @user.ingredients).empty?
-        @user.cocktails << cocktail
-      end
-    end
+  # PATCH/PUT /user/1/update_ingredients
+  def update_ingredients
+    @incoming_ingredients = Ingredient.find(params[:ingredient_ids])
+    @user.ingredients = (@incoming_ingredients & @user.ingredients) | @incoming_ingredients
+    @incoming_cocktails = []
+    Mixture.where(ingredient_id: params[:ingredient_ids]).each {|m| @incoming_cocktails << m.cocktail}
+    @user.cocktails = (@incoming_cocktails.uniq & @user.cocktails) | @incoming_cocktails.uniq
   end
 
   # PATCH/PUT /users/1
@@ -69,6 +65,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :password, :password_confirmation)
+      params.require(:user).permit(:name, :password, :password_confirmation, ingredient_ids: [])
     end
 end
