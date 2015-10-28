@@ -41,6 +41,8 @@ class UsersController < ApplicationController
     @incoming_cocktails = []
     Mixture.where(ingredient_id: params[:ingredient_ids]).each {|m| @incoming_cocktails << m.cocktail}
     @user.cocktails = (@incoming_cocktails.uniq & @user.cocktails) | @incoming_cocktails.uniq
+
+    render json: @user.ingredients
   end
 
   # PATCH/PUT /users/1
