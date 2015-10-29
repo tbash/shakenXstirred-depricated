@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails, :update_ingredients]
+  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails]
 
   # GET /users
   def index
@@ -36,6 +36,8 @@ class UsersController < ApplicationController
   
   # PATCH/PUT /user/1/update_ingredients
   def update_ingredients
+    debugger
+    @user = User.find(params[:id])
     @incoming_ingredients = Ingredient.find(params[:ingredient_ids])
     @user.ingredients = (@incoming_ingredients & @user.ingredients) | @incoming_ingredients
     @incoming_cocktails = []
