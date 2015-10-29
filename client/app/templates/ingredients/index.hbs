@@ -2,7 +2,7 @@
   {{#paper-button raised=true action="updateInventory"}}Update Inventory{{/paper-button}}
   {{#paper-content class="md-whiteframe-z1"}}
     {{#paper-list}}
-      {{#paper-subheader class="md-no-sticky"}}Inventory of your spirits{{/paper-subheader}}
+      {{#paper-subheader class="md-no-sticky"}}Take inventory of your ingredients{{/paper-subheader}}
       {{#each model as |ingredient|}}
       {{#paper-item action="addToInventory" value=ingredient.name}}
         <p>{{ingredient.name}}</p>

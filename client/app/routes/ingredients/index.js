@@ -13,8 +13,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
     updateInventory() {
       debugger;
-      var spirits = this.get('spirits');
-      
     },
 
     updateWarning() {
