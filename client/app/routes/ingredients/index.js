@@ -7,12 +7,13 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
   actions: {
 
-    addToInventory() {
-      debugger;
-    },
-
     updateInventory() {
-      debugger;
+
+      Ember.$.ajax({
+        type: "PUT",
+        url: (this.store.adapterFor('this.constructor.typeKey').host + "/update_ingredients"),
+        data: { API_KEY: this.get("session.data.authenticated.access_token"), ingredients: checkedIngredients }
+      });
     },
 
     updateWarning() {

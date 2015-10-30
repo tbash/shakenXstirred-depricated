@@ -23,21 +23,7 @@ class UsersController < ApplicationController
       render json: @user.errors, status: :unprocessable_entity
     end
   end
-  
-  # PATCH/PUT /user/1/update_ingredients
-  def update_ingredients
-    user = User.find(params[:id])
-    incoming_ingredients = Ingredient.find(params[:ingredient_ids])
-    user.ingredients = (incoming_ingredients & user.ingredients) | incoming_ingredients
-    incoming_cocktails = []
-    Mixture.where(ingredient_id: params[:ingredient_ids]).each do |mix|
-      if (mix.cocktail.ingredients - user.ingredients).empty?
-        incoming_cocktails << mix.cocktail
-      end
-    end
-    
-    user.cocktails = (incoming_cocktails & user.cocktails) | incoming_cocktails
-  end
+ 
 
   # PATCH/PUT /users/1
   def update
@@ -61,6 +47,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :password, :password_confirmation, ingredient_ids: [])
+      params.require(:user).permit(:name, :password, :password_confirmation, :API_KEY, ingredient_ids: [])
     end
 end
