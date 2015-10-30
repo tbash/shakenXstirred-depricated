@@ -13,16 +13,6 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-  # GET /users/1/ingredients
-  def show_ingredients
-    render json: @user.ingredients
-  end
-
-  # GET /users/1/cocktails
-  def show_cocktails
-    render json: @user.cocktails
-  end
-
   # POST /users
   def create
     @user = User.new(user_params)
@@ -36,20 +26,22 @@ class UsersController < ApplicationController
   
   # PATCH/PUT /user/1/update_ingredients
   def update_ingredients
-    debugger
-    @user = User.find(params[:id])
-    @incoming_ingredients = Ingredient.find(params[:ingredient_ids])
-    @user.ingredients = (@incoming_ingredients & @user.ingredients) | @incoming_ingredients
-    @incoming_cocktails = []
-    Mixture.where(ingredient_id: params[:ingredient_ids]).each {|m| @incoming_cocktails << m.cocktail}
-    @user.cocktails = (@incoming_cocktails.uniq & @user.cocktails) | @incoming_cocktails.uniq
-
-    render json: @user.ingredients
+    user = User.find(params[:id])
+    incoming_ingredients = Ingredient.find(params[:ingredient_ids])
+    user.ingredients = (incoming_ingredients & user.ingredients) | incoming_ingredients
+    incoming_cocktails = []
+    Mixture.where(ingredient_id: params[:ingredient_ids]).each do |mix|
+      if (mix.cocktail.ingredients - user.ingredients).empty?
+        incoming_cocktails << mix.cocktail
+      end
+    end
+    
+    user.cocktails = (incoming_cocktails & user.cocktails) | incoming_cocktails
   end
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
+    if @user.update(user_params) && @user == User.find_by(authentication_token: params[:API_KEY])
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -58,7 +50,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-    @user.destroy
+    @user.destroy if @user == User.find_by(authentication_token: params[:API_KEY])
   end
 
   private
