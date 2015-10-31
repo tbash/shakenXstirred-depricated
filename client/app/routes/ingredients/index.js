@@ -6,9 +6,13 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     return this.store.findAll('ingredient');
   },
   actions: {
+    addToInventory() {
+      this.get('ingredient');
+      debugger;
+    },
 
     updateInventory() {
-
+      var checkedIngredients = this.get('checkedIngredients');
       Ember.$.ajax({
         type: "PUT",
         url: (this.store.adapterFor('this.constructor.typeKey').host + "/update_ingredients"),

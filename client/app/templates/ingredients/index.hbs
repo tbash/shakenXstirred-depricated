@@ -1,12 +1,14 @@
 <div class="doc-content">
-  {{#paper-button raised=true action="updateInventory"}}Update Inventory{{/paper-button}}
   {{#paper-content class="md-whiteframe-z1"}}
     {{#paper-list}}
       {{#paper-subheader class="md-no-sticky"}}Take inventory of your ingredients{{/paper-subheader}}
-      {{#each model as |ingredient|}}
-      {{#paper-item action="addToInventory" value=ingredient.name}}
+      {{#each ingredient in model}}
+      {{paper-divider}}
+      {{#paper-item}}
         <p>{{ingredient.name}}</p>
-        {{paper-checkbox class="md-secondary"  checked=ingredient}}
+        {{#paper-button class="md-secondary" icon-button=true action="updateInventory"}}
+          {{paper-icon icon="delete"}}
+        {{/paper-button}}
       {{/paper-item}}
       {{else}}
         {{#paper-item}}
@@ -15,4 +17,4 @@
       {{/each}}
     {{/paper-list}}
   {{/paper-content}}
-</div>
+</div
