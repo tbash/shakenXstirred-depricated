@@ -14,17 +14,9 @@ export default Ember.Controller.extend({
       var today = Date.now();
       var twentyOne = today - Date.parse("January 1, 1991, 00:00:00 UTC");
       dob = Date.parse(dob);
-      if (nameRegex.test(name) === false) {
+      if (nameRegex.test(name) === false || passwordRegex.test(password) === false) {
         this.notifications.addNotification({
-          message: 'username can only contain letters, numbers, underscores, or hyphens',
-          type: 'error',
-          autoClear: true,
-          clearDuration: 4000
-        });
-      }
-      else if (passwordRegex.test(password) === false) {
-        this.notifications.addNotification({
-          message: 'password can only contain letters, numbers, underscores, or hyphens',
+          message: 'letters, numbers, underscores, or hyphens only please',
           type: 'error',
           autoClear: true,
           clearDuration: 4000
@@ -40,7 +32,7 @@ export default Ember.Controller.extend({
       }
       else if (dob > twentyOne) {
         this.notifications.addNotification({
-          message: 'you must twenty-one or older or lying to use this service',
+          message: 'you must 21, older, or lying to use this service',
           type: 'error',
           autoClear: true,
           clearDuration: 4000

@@ -3,8 +3,6 @@ class CreateMixologies < ActiveRecord::Migration
     create_table :mixologies do |t|
       t.integer :user_id
       t.integer :cocktail_id
-      
-      t.timestamps
     end
   end
 end
