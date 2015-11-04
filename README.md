@@ -13,7 +13,7 @@
 * [PhantomJS](http://phantomjs.org/)
 
 ##### Dev Env setup
-* Fork and clone
+* Clone
 * `vagrant up`
 * `vagrant ssh`
 * `cd /srv/shaken_slash_stirred/api`
@@ -24,4 +24,4 @@
 * `npm install && bower install`
 * `ember serve`
 * Check out the front-end [here](http://localhost:4200)
-* Please note that in this project the use of ./bin/rails or bin/rails is required for regular rails actions
+* Please note that in this project the use of ./bin/rails or bin/rails is required for the rails cli
