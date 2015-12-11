@@ -1,8 +1,0 @@
-import DS from 'ember-data';
-
-export default DS.Model.extend({
-  name: DS.attr('string'),
-  recipe: DS.attr('string'),
-  ingredients: DS.hasMany('ingredient'),
-  users: DS.hasMany('user')
-});

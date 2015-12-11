@@ -15,5 +15,5 @@ Vagrant.configure(2) do |config|
     vb.memory = "2048"
   end
 
-  config.vm.provision :shell, path: 'bootstrap.sh', keep_color: true
+  config.vm.provision :shell, path: 'tba.sh', keep_color: true
 end
