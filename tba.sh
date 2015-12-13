@@ -30,6 +30,11 @@ sudo -u postgres createuser --superuser vagrant
 sudo -u postgres createdb -O vagrant activerecord_unittest
 sudo -u postgres createdb -O vagrant activerecord_unittest2
 
+sudo touch /etc/init.d/port_swap
+sudo chmod 777 /etc/init.d/port_swap
+sudo echo "sudo iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000" >> /etc/init.d/port_swap
+sudo ln -s /etc/init.d/port_swap /etc/rcS.d/S99port_swap
+
 install 'Nokogiri dependencies' libxml2 libxml2-dev libxslt1-dev
 install 'ExecJS runtime' nodejs
 install 'Node Package Manager' npm
