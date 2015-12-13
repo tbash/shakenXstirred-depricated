@@ -21,4 +21,4 @@
 * `npm install`
 * `npm start`
 * Check out the front-end [here](http://localhost:4200)
-* Please note that in this project the use of ./bin/rails or bin/rails is required for the rails cli
+* Please note that in this project the use of ./bin/rails or bin/rails is required for normal rails ops
