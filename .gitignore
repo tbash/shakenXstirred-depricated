@@ -1,7 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-tmp
 client/dist/
 
 # dependencies
@@ -10,12 +9,11 @@ client/node_modules
 # misc
 client/npm-debug.log
 client/testem.log
-log
-
 api/.bundle
 api/log/*
-api/tmp
-api/Gemfile.lock
+api/tmp/*
+!api/log/.keep
+!api/tmp/.keep
 .vagrant
 .DS_Store
 *.swp

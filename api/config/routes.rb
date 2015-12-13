@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/users/:id/cocktails',           to: 'users#show_cocktails'
   post '/session',                      to: 'sessions#create'
 
-  put '/update_ingredients',            to: 'inventory#update_ingredients'
+  put 'users/:id/update_ingredients',   to: 'inventory#update_ingredients'
 
   resources :ingredients
   get '/ingredients/:id/cocktails',     to: 'ingredients#show_cocktails'

@@ -1,7 +1,7 @@
 class InventoryController < ApplicationController
   # PATCH/PUT /update_ingredients
   def update_ingredients
-    user = User.find_by(authentication_token: params[:API_KEY])
+    user = User.find params[:id]
     incoming_ingredients = Ingredient.find(params[:ingredients])
     user.ingredients = (incoming_ingredients & user.ingredients) | incoming_ingredients
     incoming_cocktails = []
