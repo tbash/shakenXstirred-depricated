@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :show_ingredients, :show_cocktails]
+  before_action :set_user, only: [:show, :update, :destroy, :update_inventory]
 
   # GET /users
   def index
@@ -23,7 +23,11 @@ class UsersController < ApplicationController
       render json: @user.errors, status: :unprocessable_entity
     end
   end
- 
+
+  # POST /users/1/update_inventory
+  def update_inventory
+    @user.update_inventory(params[:ingredient_ids])
+  end
 
   # PATCH/PUT /users/1
   def update

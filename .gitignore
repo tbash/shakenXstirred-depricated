@@ -18,3 +18,4 @@ api/tmp/*
 .DS_Store
 *.swp
 *~
+api/.byebug_history
