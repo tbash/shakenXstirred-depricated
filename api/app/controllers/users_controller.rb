@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params) && @user == User.find_by(authentication_token: params[:API_KEY])
+    if @user.update(user_params)
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-    @user.destroy if @user == User.find_by(authentication_token: params[:API_KEY])
+    @user.destroy
   end
 
   private
