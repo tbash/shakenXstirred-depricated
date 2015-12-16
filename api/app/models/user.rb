@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   has_many :inventories
   has_many :ingredients, through: :inventories
   has_secure_password
-  after_initialize :update_mixologies
 
   def update_mixologies
     cocktails = []
@@ -20,7 +19,8 @@ class User < ActiveRecord::Base
   end
 
   def update_inventory(ingredient_ids)
-    ingredients = Ingredients.find(ingredient_ids)
+    ingredients = Ingredient.find(ingredient_ids)
     self.ingredients = ingredients
+    self.update_mixologies
   end
 end
