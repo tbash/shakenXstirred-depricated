@@ -46,6 +46,7 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
+      # TODO change to User.find_by(authentication_token: params[:API_KEY])
       @user = User.find(params[:id])
     end
 

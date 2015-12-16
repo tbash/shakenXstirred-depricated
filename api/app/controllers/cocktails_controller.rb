@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show,:show_ingredients]
+  before_action :set_cocktail, only: [:show]
 
   # GET /cocktails
   def index
