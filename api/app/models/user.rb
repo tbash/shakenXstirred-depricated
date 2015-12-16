@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
   def update_inventory(ingredient_ids)
-    ingredients = Ingredients.find(ingredient_ids)
+    ingredients = Ingredient.find(ingredient_ids)
     self.ingredients = ingredients
     self.update_mixologies
   end
