@@ -12,7 +12,8 @@ unless Rails.env.production?
   User.create(users_config["users"])
 
   users_config["users_ingredients"].each do |u_i|
-    User.find(u_i["user_id"].to_i).ingredients << Ingredient.find(u_i["ingredient_id"].split(",").map(&:to_i))
+    user = User.find(u_i["user_id"].to_i)
+    user.update_inventory(u_i["ingredient_id"].split(",").map(&:to_i))
   end
 end
 
