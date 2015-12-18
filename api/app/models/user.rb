@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
   has_secure_password
 
   def update_mixologies
-    cocktails = []
-    ingredient_ids = []
     self.ingredients.each { |i| ingredient_ids << i.id }
     Mixture.where(ingredient_id: ingredient_ids).each do |mix|
       if (mix.cocktail.ingredients - self.ingredients).empty?
