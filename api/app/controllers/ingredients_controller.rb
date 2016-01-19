@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: [:show, :show_cocktails]
+  before_action :set_ingredient, only: [:show]
 
   # GET /ingredients
   def index
@@ -12,12 +12,6 @@ class IngredientsController < ApplicationController
   def show
     render json: @ingredient.users
   end
-
-  # GET /ingredients/1/cocktails
-  def show_cocktails
-    render json: @ingredient.cocktails
-  end
-  
 
   private
     # Use callbacks to share common setup or constraints between actions.

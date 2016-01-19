@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :update_inventory]
+  before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
@@ -24,9 +24,9 @@ class UsersController < ApplicationController
     end
   end
 
-  # POST /users/1/update_inventory
+  # POST /update_inventory
   def update_inventory
-    @user.update_inventory(params[:ingredient_ids])
+    current_user.update_inventory(params[:ingredient_ids])
   end
 
   # PATCH/PUT /users/1
@@ -46,7 +46,6 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      # TODO change to User.find_by(authentication_token: params[:API_KEY])
       @user = User.find(params[:id])
     end
 

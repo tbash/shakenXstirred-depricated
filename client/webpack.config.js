@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'eval',
   entry: [
     'webpack/hot/only-dev-server',
-    './src/index'
+    './src/app'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
