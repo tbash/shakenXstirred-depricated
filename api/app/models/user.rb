@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
       end
     end
 
-    self.cocktails = (cocktails & self.cocktails) | cocktails
+    self.cocktails = cocktails
   end
 
   def update_inventory(ingredient_ids)
