@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   # POST /update_inventory
   def update_inventory
-    current_user.update_inventory(params[:ingredient_ids])
+      current_user.update_inventory(params[:ingredient_ids]) if current_user
   end
 
   # PATCH/PUT /users/1
