@@ -15,4 +15,3 @@ module Rails
     # Note: Module#prepend requires Ruby 2.0 or later
     prepend new_defaults
   end
-end

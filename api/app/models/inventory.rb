@@ -1,4 +1,4 @@
-class Inventory < ActiveRecord::Base
+class Inventory < ApplicationRecord
   belongs_to :user
   belongs_to :ingredient
 end
