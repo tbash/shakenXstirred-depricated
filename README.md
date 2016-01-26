@@ -16,6 +16,7 @@
 * `cd /srv/shaken_slash_stirred/api`
 * `bundle`
 * `./bin/rails s`
+* `./bin/rake db:create db:migrate db:seed`
 * Check out the back-end [here](http://33.33.33.33:3000)
 * In another tab, `cd client`
 * `npm install`

@@ -1,8 +1,8 @@
-class Cocktail < ActiveRecord::Base
+class Cocktail < ApplicationRecord
   has_many :mixtures
   has_many :ingredients, through: :mixtures
-  has_many :mixologies
-  has_many :users, through: :mixologies
+  has_many :user_cocktails
+  has_many :users, through: :user_cocktails
   after_initialize :generate_mix, if: :new_record?
 
   def generate_mix

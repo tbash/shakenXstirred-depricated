@@ -3,7 +3,7 @@ users:
   - name: tbash
     password: password
     password_confirmation: password
-  
+
   - name: teebash
     password: password
     password_confirmation: password
@@ -11,7 +11,7 @@ users:
   - name: rick
     password: password
     password_confirmation: password
-  
+
   - name: step
     password: password
     password_confirmation: password
@@ -19,7 +19,7 @@ users:
   - name: dude
     password: password
     password_confirmation: password
-  
+
   - name: bargeek
     password: password
     password_confirmation: password
@@ -27,7 +27,7 @@ users:
   - name: lady
     password: password
     password_confirmation: password
-  
+
   - name: nerd
     password: password
     password_confirmation: password
@@ -41,7 +41,7 @@ users_ingredients:
   - user_id: 3
     ingredient_id: 7, 36, 28
   - user_id: 4
-    ingredient_id: 37, 46, 43 
+    ingredient_id: 37, 46, 43
   - user_id: 5
     ingredient_id: 12, 47, 48, 49, 50, 15, 1, 36, 13, 28, 6, 22, 29,  9, 3, 19
   - user_id: 6
