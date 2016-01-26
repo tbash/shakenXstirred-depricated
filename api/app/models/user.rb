@@ -3,6 +3,9 @@ class User < ApplicationRecord
   has_many :cocktails, through: :user_cocktails
   has_many :inventories
   has_many :ingredients, through: :inventories
+  has_many :followers, class_name: 'Followings', foreign_key: 'user_id'
+  has_many :following, class_name: 'Followings', foreign_key: 'follower_id'
+
   has_secure_password
 
   def update_cocktails(ingredient_ids)
