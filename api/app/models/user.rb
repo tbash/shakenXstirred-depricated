@@ -11,6 +11,7 @@ class User < ApplicationRecord
                                    dependent:   :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships
+  has_many :feeds
 
   has_secure_password
 
@@ -25,6 +26,8 @@ class User < ApplicationRecord
     end
 
     self.cocktails = can_make
+
+    self.feeds.create(content: "#{self.name} updated their inventory!!")
   end
 
   def update_inventory(ingredient_ids)
@@ -36,6 +39,8 @@ class User < ApplicationRecord
   # Follows a user
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
+    followee = active_relationships.last.followed
+    self.feeds.create(content: "#{self.name} is now following #{followee.name}")
   end
 
   # Unfollows a user
