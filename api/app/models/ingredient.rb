@@ -1,4 +1,4 @@
-class Ingredient < ActiveRecord::Base
+class Ingredient < ApplicationRecord
   has_many :mixtures
   has_many :cocktails, through: :mixtures
   has_many :inventories

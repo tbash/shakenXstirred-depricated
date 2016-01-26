@@ -1,36 +1,36 @@
 require 'test_helper'
 
-class UsersControllerTest < ActionController::TestCase
+class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user = users(:one)
   end
 
   test "should get index" do
-    get :index
+    get users_url
     assert_response :success
   end
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, params: { user: { name: @user.name, password_digest: @user.password_digest } }
+      post users_url, params: { user: { about: @user.about, authentication_token: @user.authentication_token, name: @user.name, password_digest: @user.password_digest } }
     end
 
     assert_response 201
   end
 
   test "should show user" do
-    get :show, params: { id: @user }
+    get user_url(@user)
     assert_response :success
   end
 
   test "should update user" do
-    patch :update, params: { id: @user, user: { name: @user.name, password_digest: @user.password_digest } }
+    patch user_url(@user), params: { user: { about: @user.about, authentication_token: @user.authentication_token, name: @user.name, password_digest: @user.password_digest } }
     assert_response 200
   end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do
-      delete :destroy, params: { id: @user }
+      delete user_url(@user)
     end
 
     assert_response 204

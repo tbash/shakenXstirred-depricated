@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :update_inventory]
+  before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
@@ -24,14 +24,14 @@ class UsersController < ApplicationController
     end
   end
 
-  # POST /users/1/update_inventory
+  # POST /update_inventory
   def update_inventory
-    @user.update_inventory(params[:ingredient_ids])
+      current_user.update_inventory(params[:ingredient_ids]) if current_user
   end
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params) && @user == User.find_by(authentication_token: params[:API_KEY])
+    if @user.update(user_params)
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -40,18 +40,17 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-    @user.destroy if @user == User.find_by(authentication_token: params[:API_KEY])
+    @user.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      # TODO change to User.find_by(authentication_token: params[:API_KEY])
       @user = User.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :password, :password_confirmation, :API_KEY, ingredient_ids: [])
+      params.require(:user).permit(:name, :about, :authentication_token, :password_digest, ingredient_ids: [])
     end
 end

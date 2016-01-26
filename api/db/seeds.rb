@@ -6,7 +6,7 @@ cocktails_seed_file = File.join(Rails.root, 'db', 'seeds/cocktails.yml')
 cocktails_config = YAML::load_file(cocktails_seed_file)
 Cocktail.create(cocktails_config)
 
-unless Rails.env.production? 
+unless Rails.env.production?
   users_seed_file = File.join(Rails.root, 'db', 'seeds/users.yml')
   users_config = YAML::load_file(users_seed_file)
   User.create(users_config["users"])

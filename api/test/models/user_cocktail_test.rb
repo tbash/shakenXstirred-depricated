@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MixologyTest < ActiveSupport::TestCase
+class UserCocktailTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
