@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy, :follow]
 
   # GET /users
   def index
@@ -27,6 +27,11 @@ class UsersController < ApplicationController
   # POST /update_inventory
   def update_inventory
       current_user.update_inventory(params[:ingredient_ids]) if current_user
+  end
+
+  # POST /users/1/follow
+  def follow
+    current_user.follow @user
   end
 
   # PATCH/PUT /users/1
