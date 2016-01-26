@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   resources :users
-  # These go unused for now as users should not have the
-  # ability to create new ingredients or cocktails
-  # resources :ingredients
-  # resources :cocktails
+  resources :ingredients, only: [:index]
+  resources :cocktails,   only: [:index, :show]
 
   get  '/feed',             to: 'feeds#index'
   post '/sessions',         to: 'sessions#create'

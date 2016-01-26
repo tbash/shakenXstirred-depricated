@@ -15,5 +15,11 @@ unless Rails.env.production?
     user = User.find(u_i["user_id"].to_i)
     user.update_inventory(u_i["ingredient_id"].split(",").map(&:to_i))
   end
+
+  users_config["follows"].each do |f|
+    follower = User.find(f["follower_id"].to_i)
+    followee = User.find(f["followee_id"].to_i)
+    follower.follow followee
+  end
 end
 

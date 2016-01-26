@@ -23,3 +23,10 @@
 * `npm start`
 * Check out the front-end [here](http://localhost:8000)
 * Please note that in this project the use of ./bin/rails or bin/rails is required for normal rails ops
+
+
+### Example cURL usage
+* POST Login: `$ curl -H "Content-Type:application/json" -d '{"username":"tbash","password":"password"}' http://33.33.33.33:3000/sessions`
+* POST Update Inventory: `$ curl -H "Content-Type:application/json" -H "auth_token:1:3a6528ef0b0ee1bc6b8dfbfbd39677cc" -d '{"ingredient_ids":[1, 2]}' http://33.33.33.33:3000/update_inventory`
+* GET Feed: `curl -H "Content-Type:application/json" -H "auth_token:1:3a6528ef0b0ee1bc6b8dfbfbd39677cc" http://33.33.33.33:3000/feed`
+* POST Follow: `$ curl -H "Content-Type:application/json" -H "auth_token:1:3a6528ef0b0ee1bc6b8dfbfbd39677cc" -X POST http://33.33.33.33:3000/users/7/follow`
