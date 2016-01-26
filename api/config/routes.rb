@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :ingredients
-  resources :cocktails
   resources :users
+  # These go unused for now as users should not have the
+  # ability to create new ingredients or cocktails
+  # resources :ingredients
+  # resources :cocktails
 
   post '/sessions',         to: 'sessions#create'
   post '/update_inventory', to: 'users#update_inventory'
