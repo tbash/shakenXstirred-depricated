@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # resources :ingredients
   # resources :cocktails
 
+  get  '/feed',             to: 'feeds#index'
   post '/sessions',         to: 'sessions#create'
   post '/update_inventory', to: 'users#update_inventory'
   post '/users/:id/follow', to: 'users#follow'
