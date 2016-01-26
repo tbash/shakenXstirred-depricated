@@ -1,8 +1,7 @@
 class FeedsController < ApplicationController
   # GET /feed
   def index
-    # @feed = current_user.follower_feed
-    @feed = Feed.all
+    @feed = current_user.followers_feed
 
     render json: @feed
   end

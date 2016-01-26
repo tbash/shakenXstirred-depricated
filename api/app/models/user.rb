@@ -52,4 +52,9 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+
+  def followers_feed
+    user_ids = self.following.pluck(:id)
+    Feed.where(user_id: user_ids)
+  end
 end
