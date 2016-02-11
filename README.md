@@ -1,4 +1,6 @@
-[![Stories in Ready](https://badge.waffle.io/teebash/shakenXstirred.png?label=ready&title=Ready)](https://waffle.io/teebash/shakenXstirred)
+DEPRICATED in favor of split repos with a more secure api
+
+
 ## Shaken/Stirred
 
 
